@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>boolaga</title>
+
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Moving Button</title>
+		<style>
+			body {
+				margin: 0;
+				height: 100vh;
+				width: 100vw;
+				background-color: #333;
+			}
+			.wrapper {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				height: 100%;
+				flex-direction: column;
+			}
+			span {
+				color: #eee;
+			}
+			button {
+				cursor: pointer;
+				position: absolute;
+				width: fit-content;
+				height: fit-content;
+				transition: all 0.2s;
+				border-radius: 8px;
+			}
+			#Yeah {
+				transform: translate(-50px, 120px);
+			}
+			#no {
+				transform: translate(50px, 120px);
+			}
+		</style>
+</head>
+<body>
+<div class="wrapper">
+			<span id="msg">Hey Wanna be my Valentines??</span>
+			<img src="https://media.tenor.com/tVjoj2nkKvkAAAAj/huh-looking.gif" alt="" id="sticker" />
+
+			<button onclick="document.location='page1.html'">Yeah, kinda Good</button>
+			<button id="no">No!</button><script>
+			let no = document.getElementById('no');
+			let sticker = document.getElementById('sticker');
+			let msg = document.getElementById('msg');
+			let gak = 0;
+			no.addEventListener('mouseover', function () {
+				let randX = Math.random() * 70;
+				let randY = Math.random() * 80;
+
+				no.style.left = randX + '%';
+				no.style.top = randY + '%';
+
+				gak++;
+				if (gak == 1) {
+					msg.innerHTML = 'HEY! &#128545';
+					sticker.src = 'https://media.tenor.com/VDUojADM6TEAAAAj/yaseen.gif';
+				}
+				if (gak == 2) {
+					msg.innerHTML = 'Please Press "Good" &#128536';
+					sticker.src = 'https://media.tenor.com/sq91_zcvgsIAAAAj/cat-tease.gif';
+				}
+				if (gak == 3) {
+					msg.innerHTML = 'I want to tell you something really really importanttt heheh &#129322';
+					sticker.src = 'https://media.tenor.com/Pf6kEyHEsnMAAAAj/risada.gif';
+				}
+				if (gak == 4) {
+					msg.innerHTML = 'PLEASSEEE PRESS IT NAAA... &#129315';
+					sticker.src = 'https://media.tenor.com/xBF0HstBso8AAAAj/peachandgoma.gif';
+				}
+				if (gak == 5) {
+					msg.innerHTML = 'BIHH PAPAGOD NA AKUUUUU~~~&#128557';
+					sticker.src = 'https://media.tenor.com/evMwgWDLI7cAAAAj/peach-cute.gif';
+				}
+				if (gak == 6) {
+					msg.innerHTML = 'Ayo donggg, pwissss &#129402';
+					sticker.src = 'https://media.tenor.com/c9tu8_KoqlUAAAAj/cuddles-panda.gif';
+				}
+				if (gak == 7) {
+					msg.innerHTML = 'pwissss &#128557';
+					sticker.src = 'https://media.tenor.com/wsVaAXbCmWUAAAAj/mochi-mochi-peach-cute-cat.gif';
+				}
+				if (gak >= 8) {
+					msg.innerHTML = 'just press the "yeah, kinda good" mag tatagal ka dto sigi... &#128532';
+					sticker.src = 'https://media.tenor.com/pZDCJwlRuSgAAAAj/cute.gif';
+				}
+			});
+		</script>
+</body>
+</html>
